@@ -46,7 +46,19 @@ export class HeaderComponent  {
   clickedButton(){ 
     console.log("button clicked");
   }
+ 
+  mouseHover(){ 
+    console.log("mouse hovered")
+  } 
+   
+  eneterdKey(){ 
+    console.log("key pressed")
+  } 
+   
+  enterKey(event:any){  
+    console.log(event.keyCode)
 
+  }
 
 
 

@@ -19,5 +19,7 @@
 <button [style.backgroundColor]="styleVar ? 'green':'orange'" (click)="changeBackground()">click me</button> 
  
 <!--Event Binding--> 
-<button (click)="clickedButton()">Event Binding</button>
+<button (click)="clickedButton()" (mouseover)="mouseHover()">Event Binding</button> 
+<input type="text" (keyup)="eneterdKey()"/> 
+<input type="text" (keyup)="enterKey($event)"/>
  
