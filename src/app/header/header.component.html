@@ -1,0 +1,23 @@
+<!--String interpolation and property binding--> 
+<ul>
+    <li *ngFor="let name of name; let i = index">
+      Name: {{ name }}, Age: {{ Age[i] }}
+    </li>
+  </ul> 
+ 
+<img [src]="imageUrl" alt="dog-image"/>   <br>
+ 
+<button disabled="{{isDisable}}">Disabled using string interpolation</button>  <br>
+<button [disabled]="isDisable">Disabled using property binding</button> <br>
+ 
+ 
+<!--Class binding--> 
+<button [class.active]="isActive" [class.in-active]="!isActive" (click)="changeColor()">class binding</button> <br>
+<button [class.apple]="fruitName=='apple'">Style binding</button> <br>
+ 
+<!--Style binding--> 
+<button [style.backgroundColor]="styleVar ? 'green':'orange'" (click)="changeBackground()">click me</button> 
+ 
+<!--Event Binding--> 
+<button>Event Binding</button>
+ 
