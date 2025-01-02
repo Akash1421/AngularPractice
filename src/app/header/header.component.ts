@@ -42,7 +42,10 @@ export class HeaderComponent  {
  } 
   
   //!------------------------------------------->EVENT_BINDING<------------------------------------------------------------!   
-
+ 
+  clickedButton(){ 
+    console.log("button clicked");
+  }
 
 
 
