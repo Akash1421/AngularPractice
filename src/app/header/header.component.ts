@@ -58,7 +58,13 @@ export class HeaderComponent  {
   enterKey(event:any){  
     console.log(event.keyCode)
 
-  }
+  }  
+   
+  //!------------------------------------------->TEMPLATE_VARIABLE<------------------------------------------------------------!   
+   
+
+   
+
 
 
 
