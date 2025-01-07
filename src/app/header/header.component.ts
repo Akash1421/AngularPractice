@@ -1,9 +1,10 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-header',
-  imports: [CommonModule],
+  imports: [CommonModule,FormsModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
@@ -61,9 +62,29 @@ export class HeaderComponent  {
   }  
    
   //!------------------------------------------->TEMPLATE_VARIABLE<------------------------------------------------------------!   
+   keyenter(user:HTMLInputElement){ 
+    console.log(user.value)
+  } 
    
+    //!------------------------------------------->TWO_WAY_DATABINDING<------------------------------------------------------------!  
+    username:string="kevin";
+    updateUsername(newName:string){  
+      this.username=newName;
 
-   
+    } 
+     
+    greetingText:string = ""; 
+      
+    //!------------------------------------------->STRUCTRUAL_DIRECTIVES<------------------------------------------------------------!  
+    
+    name1:string = "JHON";  
+    booleanValue:boolean = true 
+     
+    isAdmin:boolean = false 
+    isMemeber:boolean = false 
+    
+    
+
 
 
 

@@ -1,1 +1,11 @@
+<button (click)="loginCount()" [disabled]="isdisabled">Login</button>   
+ @if(logincountbutton >=3){ 
+    <h3>Attempts Exceeded!Please try again later.</h3>
+ } 
+  
+<!--if-else using String values --> 
+<h3 *ngIf="userRole == 'Admin'; else isMemeber">Welcome Admin</h3> 
+<ng-template #isMemeber> 
+    <h3>Welcome Member</h3>
+</ng-template>
 

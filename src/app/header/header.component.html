@@ -23,5 +23,26 @@
 <input type="text" (keyup)="eneterdKey()"/> 
 <input type="text" (keyup)="enterKey($event)"/> 
  
-<!--Template Variable-->
+<!--Template Variable--> 
+<br> 
+<input type="text" (keyup.enter)="keyenter(user)" #user/> 
  
+<!--Two way databinding--> 
+<input type="text" [value]="username" #username1 (keyup.enter)="updateUsername(username1.value)"/> 
+<br> 
+<input type="text" [(ngModel)]="greetingText" /> <br>
+<p>Hello {{greetingText}}</p><br>  
+
+ <!--Directives--> 
+ <!--Structural Directives--> 
+<h3 *ngIf="booleanValue">{{name1}}</h3> 
+@if(booleanValue){  
+  <p>{{name1}}</p>
+
+} 
+ 
+<!--multiple ngif-else conditions--> 
+<h3 *ngIf="isAdmin; else membermessage" >Welcome Admin</h3> 
+<ng-template #membermessage>
+<h3 *ngIf="isMemeber">Welcome Memeber</h3>  
+</ng-template>
