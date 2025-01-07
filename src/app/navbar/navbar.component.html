@@ -4,8 +4,45 @@
  } 
   
 <!--if-else using String values --> 
-<h3 *ngIf="userRole == 'Admin'; else isMemeber">Welcome Admin</h3> 
-<ng-template #isMemeber> 
+<h3 *ngIf="userRole == 'Admin'; else isMember">Welcome Admin</h3> 
+<ng-template #isMember> 
     <h3>Welcome Member</h3>
-</ng-template>
+</ng-template> 
+ 
+<!--ng-template ==> used to render something based on the condition-->
+<ng-template #doessomeaction>  
+    <button>Join Now</button>
 
+</ng-template> 
+
+ <div [ngTemplateOutlet]="doessomeaction"> 
+    <h3>SideBar</h3>
+ </div> 
+ <div [ngTemplateOutlet]="doessomeaction"> 
+    <h3>Header</h3>
+ </div>
+ <div> 
+    <h3>Footer</h3>
+ </div> 
+
+<!--ng-for directive--> 
+<ul>
+@for (item of names; track $index) { 
+    
+        <li>{{item}}</li>
+    
+}  
+</ul>
+ 
+<!--ngfor directive of oldway-->  
+<p>Ng-for using oldway</p>
+<ul> 
+    <li *ngFor="let name of names">{{name}}</li>
+</ul> 
+ 
+<!--ng-for directive for objects-->  
+<ul> 
+    <li *ngFor="let user of userDetails">{{user.id}}||name ==>{{user.name1}}||age==>{{user.age}}</li> 
+ 
+
+</ul>
