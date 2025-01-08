@@ -37,12 +37,24 @@
 <!--ngfor directive of oldway-->  
 <p>Ng-for using oldway</p>
 <ul> 
-    <li *ngFor="let name of names">{{name}}</li>
-</ul> 
+    <li *ngFor="let name of names; let i=index">{{i}}  {{name}} <button (click)="deleteUser(i)">Delete</button></li>
+</ul>  
+<input type="text" [(ngModel)]="value1"/> 
+<button (click)="addNewUser1(value1)">Add user</button> 
+<h4>{{names.length}}</h4>
  
 <!--ng-for directive for objects-->  
 <ul> 
     <li *ngFor="let user of userDetails">{{user.id}}||name ==>{{user.name1}}||age==>{{user.age}}</li> 
  
 
+</ul> 
+ 
+<!--ng-for directives(new version)--> 
+<ul> 
+    @for (item of userDetails; track $index) { 
+        <li>{{item.name1}} <button (click)="onDelete(item)">Delete</button></li>
+    }
 </ul>
+ 
+<button (click)="addNewUser()">Add new user</button>
